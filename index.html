@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#d86f4d" id="theme-color" />
+    <title>Web Development, Page by Page — Interactive Course</title>
+    <meta
+      name="description"
+      content="From basic JavaScript and React to understanding every part of a real, published web application — taught page by page with interactive labs and simulators."
+    />
+    <meta property="og:title" content="Web Development, Page by Page — Interactive Course" />
+    <meta
+      property="og:description"
+      content="From basic JavaScript and React to understanding every part of a real, published web application — taught page by page with interactive labs and simulators."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function () {
+        var t = null,
+          s = null;
+        try {
+          t = localStorage.getItem('fas-course-theme');
+          s = localStorage.getItem('fas-course-text-size');
+        } catch (e) {}
+        if (
+          t === 'dark' ||
+          (t !== 'light' &&
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+        if (s === 'lg' || s === 'sm') {
+          document.documentElement.dataset.text = s;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
